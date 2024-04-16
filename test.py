@@ -37,14 +37,6 @@ def recommander_regime(difference_poids):
         st.write("Pour atteindre votre poids idéal, nous vous recommandons de suivre ces conseils alimentaires :")
         st.write("- Réduisez votre consommation de sucre et d'aliments riches en matières grasses.")
         st.write("- Augmentez votre consommation de légumes, de fruits et de protéines maigres.")
-        st.write("- Faites de l'exercDésolé, il semble que la fin de ma réponse a été tronquée. Voici la suite du code modifié :
-
-```python
-def recommander_regime(difference_poids):
-    if difference_poids > 0:
-        st.write("Pour atteindre votre poids idéal, nous vous recommandons de suivre ces conseils alimentaires :")
-        st.write("- Réduisez votre consommation de sucre et d'aliments riches en matières grasses.")
-        st.write("- Augmentez votre consommation de légumes, de fruits et de protéines maigres.")
         st.write("- Faites de l'exercice régulièrement pour brûler des calories supplémentaires.")
     elif difference_poids < 0:
         st.write("Pour maintenir un poids santé, nous vous recommandons de suivre ces conseils alimentaires :")
