@@ -31,5 +31,21 @@ def calculer_poids():
         st.write("Le poids idéal est de", poids_ideal, "kg.")
         st.write("La différence de poids est de", difference_poids, "kg.")
 
+# # Appeler la fonction pour exécuter le programme
+# calculer_poids()
+recommander_regime(difference_poids)
+def recommander_regime(difference_poids):
+    if difference_poids > 0:
+        st.write("Pour atteindre votre poids idéal, nous vous recommandons de suivre ces conseils alimentaires :")
+        st.write("- Réduisez votre consommation de sucre et d'aliments riches en matières grasses.")
+        st.write("- Augmentez votre consommation de légumes, de fruits et de protéines maigres.")
+        st.write("- Faites de l'exercice régulièrement pour brûler des calories supplémentaires.")
+    elif difference_poids < 0:
+        st.write("Pour maintenir un poids santé, nous vous recommandons de suivre ces conseils alimentaires :")
+        st.write("- Assurez-vous de consommer suffisamment de calories pour répondre à vos besoins énergétiques.")
+        st.write("- Optez pour une alimentation équilibrée comprenant des légumes, des fruits, des céréales complètes et des protéines.")
+        st.write("- Faites de l'exercice régulièrement pour renforcer votre tonus musculaire et maintenir votre métabolisme.")
+    else:
+        st.write("Votre poids est déjà idéal. Continuez à adopter de bonnes habitudes alimentaires et à rester actif pour maintenir votre poids.")
 # Appeler la fonction pour exécuter le programme
 calculer_poids()
