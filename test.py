@@ -13,20 +13,17 @@ def calculer_poids():
     # Demander le poids initial de la personne
     poids_initial = st.number_input("Entrez le poids initial en kg : ", min_value=0.0)
 
-    # Initialiser le poids idéal à None
-    poids_ideal = None
+    # Vérifier si toutes les valeurs ont été fournies
+    if taille != 0.0 and sexe != "" and age != 0 and poids_initial != 0.0:
+        # Calculer le poids idéal selon la formule de Lorentz pour les hommes
+        if sexe == "M":
+            poids_ideal = (taille * 100 - 100) - ((taille * 100 - 150) / 4) + ((age - 20) / 4)
+        # Calculer le poids idéal selon la formule de Lorentz pour les femmes
+        elif sexe == "F":
+            poids_ideal = (taille * 100 - 100) - ((taille * 100 - 150) / 2.5) + ((age - 20) / 6)
+        else:
+            st.write("Sexe non valide.")
 
-    # Calculer le poids idéal selon la formule de Lorentz pour les hommes
-    if sexe == "M":
-        poids_ideal = (taille * 100 - 100) - ((taille * 100 - 150) / 4) + ((age - 20) / 4)
-    # Calculer le poids idéal selon la formule de Lorentz pour les femmes
-    elif sexe == "F":
-        poids_ideal = (taille * 100 - 100) - ((taille * 100 - 150) / 2.5) + ((age - 20) / 6)
-    else:
-        st.write("Sexe non valide.")
-
-    # Vérifier si le poids idéal a été calculé avec succès
-    if poids_ideal is not None:
         # Calculer la différence entre le poids initial et le poids idéal
         difference_poids = poids_initial - poids_ideal
 
