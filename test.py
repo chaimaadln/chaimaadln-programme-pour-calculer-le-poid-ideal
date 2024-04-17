@@ -33,6 +33,7 @@ def calculer_poids():
 
         # Vérifier la différence de poids et afficher les recommandations diététiques correspondantes
         if difference_poids > 0:
+            st.markdown('<span style="color: red;">*votre poids est superieur a votre poids ideal*</span>', unsafe_allow_html=True)
             st.write("*votre poids est superieur a votre poids ideal*")
             st.write("Pour atteindre votre poids idéal, vous pouvez suivre ces recommandations :")
             st.write("  - Réduisez votre consommation de calories en limitant les aliments riches en matières grasses et en sucre.")
