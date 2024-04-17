@@ -28,17 +28,19 @@ def calculer_poids():
         difference_poids = poids_initial - poids_ideal
 
         # Afficher le poids idéal et la différence de poids
-        st.write("Le poids idéal est de", poids_ideal, "kg.")
-        st.write("La différence de poids est de", difference_poids, "kg.")
+        st.write("Le poids idéal est ", round(poids_ideal,2), "kg.")
+        st.write("La différence de poids est ", round(difference_poids, 2), "kg.")
 
         # Vérifier la différence de poids et afficher les recommandations diététiques correspondantes
         if difference_poids > 0:
+            st.write("*votre poids est superieur a votre poids ideal*")
             st.write("Pour atteindre votre poids idéal, vous pouvez suivre ces recommandations :")
-            st.write("- Réduisez votre consommation de calories en limitant les aliments riches en matières grasses et en sucre.")
-            st.write("- Augmentez votre consommation de fruits, légumes et aliments riches en fibres.")
-            st.write("- Pratiquez une activité physique régulière pour brûler des calories.")
+            st.write("  - Réduisez votre consommation de calories en limitant les aliments riches en matières grasses et en sucre.")
+            st.write("  - Augmentez votre consommation de fruits, légumes et aliments riches en fibres.")
+            st.write("  - Pratiquez une activité physique régulière pour brûler des calories.")
 
         elif difference_poids < 0:
+            st.write("*votre poids est inferieur a votre poids ideal*")
             st.write("Pour maintenir un poids sain, vous pouvez suivre ces recommandations :")
             st.write("- Assurez-vous de consommer suffisamment de calories pour répondre à vos besoins nutritionnels.")
             st.write("- Choisissez des aliments nutritifs et équilibrés, comprenant des protéines, des glucides, des lipides et des vitamines.")
