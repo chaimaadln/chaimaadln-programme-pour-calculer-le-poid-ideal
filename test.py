@@ -31,21 +31,18 @@ def calculer_poids():
         st.write("Le poids idéal est de", poids_ideal, "kg.")
         st.write("La différence de poids est de", difference_poids, "kg.")
 
-# # Appeler la fonction pour exécuter le programme
-# calculer_poids()
-recommander_regime(difference_poids)
-def recommander_regime(difference_poids):
-    if difference_poids > 0:
-        st.write("Pour atteindre votre poids idéal, nous vous recommandons de suivre ces conseils alimentaires :")
-        st.write("- Réduisez votre consommation de sucre et d'aliments riches en matières grasses.")
-        st.write("- Augmentez votre consommation de légumes, de fruits et de protéines maigres.")
-        st.write("- Faites de l'exercice régulièrement pour brûler des calories supplémentaires.")
-    elif difference_poids < 0:
-        st.write("Pour maintenir un poids santé, nous vous recommandons de suivre ces conseils alimentaires :")
-        st.write("- Assurez-vous de consommer suffisamment de calories pour répondre à vos besoins énergétiques.")
-        st.write("- Optez pour une alimentation équilibrée comprenant des légumes, des fruits, des céréales complètes et des protéines.")
-        st.write("- Faites de l'exercice régulièrement pour renforcer votre tonus musculaire et maintenir votre métabolisme.")
-    else:
-        st.write("Votre poids est déjà idéal. Continuez à adopter de bonnes habitudes alimentaires et à rester actif pour maintenir votre poids.")
+        # Vérifier la différence de poids et afficher les recommandations diététiques correspondantes
+        if difference_poids > 0:
+            st.write("Pour atteindre votre poids idéal, vous pouvez suivre ces recommandations :")
+            st.write("- Réduisez votre consommation de calories en limitant les aliments riches en matières grasses et en sucre.")
+            st.write("- Augmentez votre consommation de fruits, légumes et aliments riches en fibres.")
+            st.write("- Pratiquez une activité physique régulière pour brûler des calories.")
+
+        elif difference_poids < 0:
+            st.write("Pour maintenir un poids sain, vous pouvez suivre ces recommandations :")
+            st.write("- Assurez-vous de consommer suffisamment de calories pour répondre à vos besoins nutritionnels.")
+            st.write("- Choisissez des aliments nutritifs et équilibrés, comprenant des protéines, des glucides, des lipides et des vitamines.")
+            st.write("- Restez actif et intégrez une activité physique régulière à votre routine.")
+
 # Appeler la fonction pour exécuter le programme
 calculer_poids()
